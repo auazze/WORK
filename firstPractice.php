@@ -20,7 +20,7 @@
                 <h2 class="experience-title">
                     Блок Опыт
                 </h2>
-                <time datetime="02-06-2025"
+                <time datetime="02-06-2025">02-06-2025</time>
             </header>
         </article>
 

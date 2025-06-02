@@ -1,18 +1,33 @@
 {
-  "name": "first",
+  "name": "work",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
+    "start": "vite --host 0.0.0.0",
+    "dev": "vite --host 0.0.0.0 --port 5173",
     "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auazze/WORK.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^5.3.6",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/auazze/WORK/issues"
+  },
+  "homepage": "https://github.com/auazze/WORK#readme",
+  "devDependencies": {
+    "sass": "^1.89.1",
     "vite": "^6.3.5"
   },
-  "description": ""
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.6"
+  }
 }
