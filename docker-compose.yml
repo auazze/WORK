@@ -15,4 +15,3 @@ services:
       - ./:/var/www/html
     ports:
       - "9000:9000"
-      - "5173:5173"
