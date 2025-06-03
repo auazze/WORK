@@ -11,7 +11,7 @@
 <body>
 <?php include("navbar.php"); ?>
     <header class="site-header">
-        Stankevich Stepan Alexandrovich
+        <h1>Stankevich Stepan Alexandrovich</h1>
     </header>
 
     <main>
