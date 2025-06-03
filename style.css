@@ -131,3 +131,8 @@ li:nth-child(2 of :has(a)) {
     border-inline-end-color: #007bff;           /*then change only color*/
 }
 
+.site-header {
+    background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
