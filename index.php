@@ -1,44 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru-RU">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="/css/custom.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>ProgramWeb</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="True" name="HandheldFriendly"/>
+    <meta content="no-cache" http-equiv="Cache-Control"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="address=no" name="format-detection"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+    <?php include("header.php"); ?>
+
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/style.css"
 </head>
 <body>
-<div class="header">
-    <img src="header-image.jpg" class="header-image" alt="">
 
-    <div class="container-lg">
-        <div class="row">
-            <div class="col">
-                <?php include("navbar.php") ?>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <h1>
-                    
-                </h1>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container-lg">
-    <div class="row">
-        <div class="col">
-            Продающие сайты «под ключ»
-
-        </div>
-    </div>
-</div>
 </body>
 </html>
