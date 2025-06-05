@@ -1,34 +1,132 @@
-@media (max-width: 575.98px) {
+/*@media (max-width: 575.98px) {*/
 
-}
+/*}*/
 
-@media (max-width: 767.98px) {
+/*@media (max-width: 767.98px) {*/
 
-}
+/*}*/
 
-@media (max-width: 991.98px) {
+/*@media (max-width: 991.98px) {*/
 
-}
+/*}*/
 
-@media (max-width: 1199.98px) {
+/*@media (max-width: 1199.98px) {*/
 
-}
+/*}*/
 
-@media (max-width: 1399.98px) {
+/*@media (max-width: 1399.98px) {*/
 
-}
+/*}*/
 
 .theme-schema {
-    --background-color: #1e73be;
+    --primary-color: #1e73be;
+    --secondary-color: #262b3e;
+    --primary-font: "PNR";
+    --primary-font-color: #fff;
 }
 
 @font-face {
-    font-family: "Proxima Nova";
-    src: url("assets/fonts/ProximaNova/proximanova_light.otf");
+    font-family: 'PNR';
+    src: url(assets/fonts/ProximaNova/ProximaNovaRegular.woff) format('woff');
     font-weight: normal;
-    font-size: 16px;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PNR';
+    src: url(assets/fonts/ProximaNova/ProximaNovaBold.woff) format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PNR';
+    src: url(assets/fonts/ProximaNova/ProximaNovaExtrabld.woff) format('woff');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PNR';
+    src: url(assets/fonts/ProximaNova/ProximaNova-Semibold.woff) format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PNR';
+    src: url(assets/fonts/ProximaNova/ProximaNovaLight.woff) format('woff');
+    font-weight: 300;
+    font-display: swap;
 }
 
 body {
-    font-family: "Proxima Nova", sans-serif;
+    font-family: var(--primary-font), sans-serif;
+    color: var(--primary-font-color);
+}
+
+#topbar {
+    background-color: var(--secondary-color);
+    height: 40px;
+    align-items: center;
+    display: flex;
+}
+
+
+#header {
+    background-color: var(--primary-color);
+    top: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+
+#header .container {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a, span {
+    color: var(--primary-font-color);
+}
+
+.logo a {
+    color: var(--primary-font-color);
+}
+
+.logo img {
+    max-height: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.topbar__widget {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar__widget a {
+    color: var(--primary-font-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
