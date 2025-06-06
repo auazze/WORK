@@ -1,29 +1,9 @@
-/*@media (max-width: 575.98px) {*/
-
-/*}*/
-
-/*@media (max-width: 767.98px) {*/
-
-/*}*/
-
-/*@media (max-width: 991.98px) {*/
-
-/*}*/
-
-/*@media (max-width: 1199.98px) {*/
-
-/*}*/
-
-/*@media (max-width: 1399.98px) {*/
-
-/*}*/
-
 .theme-schema {
     --primary-color: #1e73be;
     --secondary-color: #262b3e;
     --primary-font: "PNR";
     --primary-font-color: #fff;
-    --hover-color: rgba(255,255,255,.7);
+    --hover-color: rgba(255, 255, 255, .7);
     --transition: all 0.3s ease;
 }
 
@@ -120,7 +100,9 @@ body {
 
 #header.scrolled {
     top: 0;
-    opacity: 0.85;
+    left: 0;
+    right: 0;
+    opacity: 0.75;
 }
 
 #header .container {
@@ -177,8 +159,134 @@ body {
     font-size: 2rem;
 }
 
-#about { background-color: #f8f9fa; }
-#advantages { background-color: #e9ecef; }
-#faq { background-color: #f8f9fa; }
-#contacts { background-color: #e9ecef; }
-#footer { background-color: #333; color: white; }
+#about {
+    background-color: #f8f9fa;
+}
+
+#advantages {
+    background-color: #e9ecef;
+}
+
+#faq {
+    background-color: #f8f9fa;
+}
+
+#contacts {
+    background-color: #e9ecef;
+}
+
+#footer {
+    background-color: #333;
+    color: white;
+}
+
+.mobile-nav-toggle {
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+}
+
+.mobile-nav-toggle {
+    /* position: absolute; */
+    /* top: 15px; */
+}
+
+@media (max-width: 991px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+}
+
+.mobile-nav-toggle, .hamburger-box {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.mobile-nav-toggle {
+    width: 30px;
+    height: 30px;
+    top: 3px;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+}
+
+.hamburger-inner {
+    transition-duration: 0.075s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+}
+
+.hamburger-inner::after {
+    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.mobile-nav-toggle .hamburger-inner::after {
+    bottom: -10px;
+}
+
+.hamburger-inner::before {
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+
+.mobile-nav-toggle .hamburger-inner::before {
+    top: -10px;
+}
+
+@media (max-width: 575.98px) {
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 1399.98px) {
+}
