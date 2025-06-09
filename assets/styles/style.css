@@ -1,6 +1,7 @@
 .theme-schema {
     --primary-color: #1e73be;
     --secondary-color: #262b3e;
+    --footer-bg-color: #333;
     --primary-font: "PNR";
     --primary-font-size: 16px;
     --primary-font-color: #fff;
@@ -47,6 +48,10 @@ body {
     font-family: var(--primary-font), sans-serif;
     color: var(--primary-font-color);
 }
+
+/* =======
+= HEADER =
+======= */
 
 #topbar {
     background-color: var(--secondary-color);
@@ -297,11 +302,6 @@ body {
 
 #contacts {
     background-color: #e9ecef;
-}
-
-#footer {
-    background-color: #333;
-    color: white;
 }
 
 #navbar {
@@ -571,3 +571,15 @@ body {
     align-items: center;
     gap: 20px;
 }
+
+/* =======
+= FOOTER =
+======= */
+
+#footer {
+    background-color: var(--footer-bg-color);
+    color: var(--primary-font-color);
+    display: flex;
+    flex-direction: row;
+}
+
