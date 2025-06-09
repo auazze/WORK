@@ -65,12 +65,24 @@
                 <li><a class="nav-link" href="/press/" title="Новости и медиа"><span>Новости и медиа</span></a></li>
                 <li><a class="nav-link" href="/contacts/" title="Контакты"><span>Контакты</span></a></li>
             </ul>
-            <i class="mobile-nav-toggle">
+            <button class="mobile-nav-toggle" id="mobileToggle">
                 <span class="hamburger-inner"></span>
-            </i>
+            </button>
         </nav>
     </div>
 </header>
+
+<nav class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a class="nav-link" href="#about">О компании</a></li>
+        <li><a class="nav-link" href="#advantages">Наши проекты</a></li>
+        <li><a class="nav-link" href="#faq">Каталог</a></li>
+        <li><a class="nav-link" href="#contacts">Вопрос-ответ</a></li>
+        <li><a class="nav-link" href="#footer">Услуги</a></li>
+        <li><a class="nav-link" href="#footer">Новости и медиа</a></li>
+        <li><a class="nav-link" href="#footer">Контакты</a></li>
+    </ul>
+</nav>
 
 <main>
     <section class="demo-section" id="about">
@@ -105,6 +117,23 @@
                 topbar.classList.remove('hidden');
                 header.classList.remove('scrolled');
             }
+        });
+    });
+
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileToggle.addEventListener('click', function () {
+        mobileToggle.classList.toggle('active');
+
+        mobileMenu.classList.toggle('active');
+
+        const mobileLinks = mobileMenu.querySelectorAll('.nav-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
         });
     });
 </script>
