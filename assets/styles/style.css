@@ -498,6 +498,10 @@ p {
         transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     }
 
+    body.topbar-hidden #nav-links {
+        top: 60px;
+    }
+
     #nav-links.active {
         width: 100%;
         visibility: visible;

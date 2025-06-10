@@ -34,7 +34,7 @@
             <nav>
                 <ul class="topbar__widget">
                     <li>
-                        <a href="mailto:info@pl-llc.ru">info@pl-llc.ru</a>
+                        <a href="mailto:web@pl-llc.ru">web@pl-llc.ru</a>
                     </li>
                     <li>
                         <a href="tel:88005508972">8 (800) 550 89 72</a> бесплатно по России
@@ -166,6 +166,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         const topbar = document.getElementById('topbar');
         const header = document.getElementById('header');
+        const body = document.body;
 
         window.addEventListener('scroll', function () {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -173,26 +174,27 @@
             if (scrollTop > 40) {
                 topbar.classList.add('hidden');
                 header.classList.add('scrolled');
+                body.classList.add('topbar-hidden');
             } else {
                 topbar.classList.remove('hidden');
                 header.classList.remove('scrolled');
+                body.classList.remove('topbar-hidden');
             }
         });
-    });
 
-    const mobileToggle = document.getElementById('mobileToggle');
-    const mobileMenu = document.getElementById('nav-links');
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('nav-links');
 
-    mobileToggle.addEventListener('click', function () {
-        mobileToggle.classList.toggle('active');
+        mobileToggle.addEventListener('click', function () {
+            mobileToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
 
-        mobileMenu.classList.toggle('active');
-
-        const mobileLinks = mobileMenu.querySelectorAll('.nav-link');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                mobileToggle.classList.remove('active');
-                mobileMenu.classList.remove('active');
+            const mobileLinks = mobileMenu.querySelectorAll('.nav-link');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
             });
         });
     });
