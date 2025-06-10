@@ -84,7 +84,7 @@ body {
 .topbar__widget a {
     color: var(--primary-font-color);
     transition: var(--transition);
-    font-size: var(--primary-font-size);
+    font-size: 15px;
     text-decoration: none;
     position: relative;
 }
@@ -165,7 +165,7 @@ body {
     text-decoration: none;
     font-size: var(--primary-font-size);
     transition: var(--transition);
-    padding: 5px 10px;
+    padding: 5px 5px;
     text-transform: uppercase;
 }
 
@@ -308,7 +308,7 @@ p {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 10px 15px;
+    padding: 10px 5px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -337,7 +337,7 @@ p {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 15px;
+        padding: 10px 5px;
     }
 
     #logo {
@@ -346,18 +346,25 @@ p {
     }
 
     #nav-links {
-        display: none;
         position: fixed;
         top: 60px;
         left: 0;
         right: 0;
         background-color: var(--primary-color);
         flex-direction: column;
-        padding: 20px;
+        padding: 10px;
+
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     }
 
     #nav-links.active {
-        display: flex;
+        width: 100%;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     #nav-links li {
@@ -397,7 +404,7 @@ p {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 15px;
+        padding: 10px 5px;
     }
 
     #logo {
@@ -406,19 +413,25 @@ p {
     }
 
     #nav-links {
-        display: none;
         position: fixed;
         top: 60px;
         left: 0;
         right: 0;
         background-color: var(--primary-color);
         flex-direction: column;
-        padding: 20px;
+        padding: 10px;
+
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     }
 
     #nav-links.active {
         width: 100%;
-        display: flex;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     #nav-links li {
@@ -446,7 +459,7 @@ p {
 @media (min-width: 768px) and (max-width: 991.98px) {
     #topbar {
         display: flex;
-        font-size: 14px;
+        font-size: var(--primary-font-size);
     }
 
     .topbar__widget {
@@ -462,7 +475,7 @@ p {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 15px;
+        padding: 10px 5px;
     }
 
     #logo {
@@ -471,19 +484,25 @@ p {
     }
 
     #nav-links {
-        display: none;
         position: fixed;
         top: 100px;
         left: 0;
         right: 0;
         background-color: var(--primary-color);
         flex-direction: column;
-        padding: 20px;
+        padding: 10px;
+
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     }
 
     #nav-links.active {
         width: 100%;
-        display: flex;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     #nav-links li {
@@ -493,7 +512,7 @@ p {
 
     #nav-links a {
         display: block;
-        padding: 10px 0;
+        padding: 10px 5px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
@@ -524,7 +543,7 @@ p {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 15px;
+        padding: 10px 5px;
     }
 
     #nav-links {
@@ -534,14 +553,15 @@ p {
 
     #nav-links ul {
         display: flex;
-        gap: 30px;
+        gap: 25px;
         margin: 0;
         padding: 0;
         list-style: none;
+        flex-wrap: wrap;
     }
 
     .navbar a {
-        padding: 5px 10px;
+        padding: 5px 5px;
         margin: 0;
     }
 
@@ -570,7 +590,7 @@ p {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 15px;
+        padding: 10px 5px;
     }
 
     #logo {
@@ -585,14 +605,14 @@ p {
 
     #nav-links ul {
         display: flex;
-        gap: 30px;
+        gap: 25px;
         margin: 0;
         padding: 0;
         list-style: none;
     }
 
     .navbar a {
-        padding: 5px 10px;
+        padding: 5px 5px;
         margin: 0;
         white-space: nowrap;
     }
@@ -608,12 +628,12 @@ p {
 
 @media (min-width: 1400px) {
     .navbar a {
-        font-size: 16px;
-        padding: 5px 15px;
+        font-size: var(--primary-font-size);
+        padding: 5px 5px;
     }
 
     #nav-links ul {
-        gap: 40px;
+        gap: 25px;
     }
 }
 
@@ -629,7 +649,7 @@ p {
     margin-left: auto;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 /* =======
@@ -643,11 +663,52 @@ p {
 
 .footer-content {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
-    color: var(--primary-font-color);
+    padding: 15px 5px;
+    border-bottom: 1px solid var(--hover-color);
 }
 
+.footer-content .footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    max-width: 100%;
+}
+
+.footer-links img {
+    width: 30px;
+}
+
+.footer a {
+    color: var(--primary-font-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer a span {
+    position: relative;
+    transition: var(--transition);
+}
+
+.footer a span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--hover-color);
+    transition: width 0.3s ease;
+}
+
+.footer a:hover span::after,
+.footer a:focus span::after {
+    width: 100%;
+}
+
+.footer a:active span {
+    transform: translateY(1px);
+}
