@@ -5,6 +5,7 @@
     --primary-font: "PNR";
     --primary-font-size: 16px;
     --primary-font-color: #fff;
+    --secondary-font-color: #1e73be;
     --hover-color: rgba(255, 255, 255, .7);
     --transition: all 0.3s ease;
 }
@@ -250,31 +251,56 @@ body {
 }
 
 .demo-section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-}
-
-.topbar__widget li {
-    color: var(--hover-color);
+    margin-top: 100px;
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 #about {
     background-color: #f8f9fa;
+    color: #333;
 }
 
 #advantages {
-    background-color: #e9ecef;
+    background-color: #ffffff;
+    color: #333;
 }
 
 #faq {
     background-color: #f8f9fa;
+    color: #333;
 }
 
 #contacts {
-    background-color: #e9ecef;
+    background-color: #ffffff;
+    color: #333;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.1rem;
+}
+
+.simple-list {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.simple-list li {
+    margin-bottom: 0.8rem;
+}
+
+.topbar__widget li {
+    color: var(--hover-color);
 }
 
 #navbar {
