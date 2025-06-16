@@ -98,6 +98,10 @@ section, header, main, footer {
     position: relative;
 }
 
+.topbar__widget a:hover {
+    color: var(--hover-color);
+}
+
 .topbar__widget a::after {
     content: '';
     position: absolute;
@@ -109,8 +113,7 @@ section, header, main, footer {
     transition: width 0.3s ease;
 }
 
-.topbar__widget a:hover::after,
-.topbar__widget a:focus::after {
+.topbar__widget a:hover::after {
     width: 100%;
 }
 
@@ -500,6 +503,10 @@ p {
 
 .footer__divider {
     color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__legal-link:hover {
+    color: var(--hover-color);
 }
 
 @media (max-width: 991.98px) {
