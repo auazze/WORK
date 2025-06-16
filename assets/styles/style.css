@@ -111,10 +111,6 @@ footer {
     position: relative;
 }
 
-.topbar__widget a:hover {
-    color: var(--hover-color);
-}
-
 .topbar__widget a::after {
     content: '';
     position: absolute;
@@ -126,7 +122,8 @@ footer {
     transition: width 0.3s ease;
 }
 
-.topbar__widget a:hover::after {
+.topbar__widget a:hover::after,
+.topbar__widget a:focus::after {
     width: 100%;
 }
 
@@ -616,10 +613,6 @@ p + * {
     color: var(--primary-font-color);
     text-decoration: none;
     transition: var(--transition);
-}
-
-.footer__legal-link:hover {
-    color: var(--hover-color);
 }
 
 @media (max-width: 991.98px) {
