@@ -231,48 +231,36 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-
-        const root = document.documentElement;
         const header = document.getElementById('header');
         const topbar = document.getElementById('topbar');
-        const body = document.body;
         const mobBtn = document.getElementById('mobileToggle');
         const mobNav = document.getElementById('nav-links');
 
-        function updateOffset() {
-            const hHeader = header.offsetHeight;
-
-            const barVisible = !topbar.classList.contains('hidden');
-            const hTopbar = barVisible ? topbar.offsetHeight : 0;
-
-            root.style.setProperty('--header-h', (hHeader + hTopbar) + 'px');
-        }
-
-        new ResizeObserver(updateOffset).observe(header);
-        new ResizeObserver(updateOffset).observe(topbar);
-        new MutationObserver(updateOffset).observe(topbar, {attributes: true});
-        new MutationObserver(updateOffset).observe(header, {attributes: true});
-
-        updateOffset();
-
         window.addEventListener('scroll', () => {
-            const hide = window.scrollY > 40;
-            topbar.classList.toggle('hidden', hide);
-            header.classList.toggle('scrolled', hide);
-            body.classList.toggle('topbar-hidden', hide);
-        });
+            const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
-        mobBtn.addEventListener('click', () => {
-            mobBtn.classList.toggle('active');
-            mobNav.classList.toggle('active');
-        });
-        mobNav.addEventListener('click', e => {
-            if (e.target.closest('.nav-link')) {
-                mobBtn.classList.remove('active');
-                mobNav.classList.remove('active');
+            if (scrollY > 40) {
+                header.classList.add('scrolled');
+                if (topbar) topbar.classList.add('hidden');
+            } else {
+                header.classList.remove('scrolled');
+                if (topbar) topbar.classList.remove('hidden');
             }
         });
 
+        if (mobBtn && mobNav) {
+            mobBtn.addEventListener('click', () => {
+                mobBtn.classList.toggle('active');
+                mobNav.classList.toggle('active');
+            });
+
+            mobNav.addEventListener('click', e => {
+                if (e.target.closest('.nav-link')) {
+                    mobBtn.classList.remove('active');
+                    mobNav.classList.remove('active');
+                }
+            });
+        }
     });
 </script>
 
